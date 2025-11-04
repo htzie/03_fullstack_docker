@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const API_HOST = process.env.API_HOST || 'http://localhost:5001'; // need to change port to 5001
+const API_HOST = process.env.API_HOST || 'http://localhost:5000'; // need to change port to 5001
 
 const nextConfig = {
   output: 'standalone',
