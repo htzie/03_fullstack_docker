@@ -10,7 +10,7 @@ services:
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
       TZ: Asia/Bangkok
     ports:
-      - "127.0.0.1:${MYSQL_PORT:-3306}:3306"
+      - "127.0.0.1:${MYSQL_PORT:-3307}:3307"
     volumes:
       - mysql_data:/var/lib/mysql
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
@@ -21,7 +21,7 @@ services:
     restart: unless-stopped
     environment:
       PMA_HOST: mysql
-      PMA_PORT: 3306
+      PMA_PORT: 3307
       UPLOAD_LIMIT: 256M
     ports:
       - "${PHPMYADMIN_PORT:-8080}:80"
@@ -35,7 +35,7 @@ services:
       NODE_ENV: production
       PORT: 5001
       DB_HOST: mysql
-      DB_PORT: 3306
+      DB_PORT: 3307
       DB_NAME: ${MYSQL_DATABASE}
       DB_USER: ${MYSQL_USER}
       DB_PASSWORD: ${MYSQL_PASSWORD}
